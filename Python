@@ -1,0 +1,41 @@
+print("Introduce el Numerador de la Primera Fracción")
+rNumerador1 = int(input())
+print("Introduce el Denominador de la Primera Fracción")
+rDenominador1 = float(input())
+print("Introduce el Numerador de la Segunda Fracción")
+rNumerador2 = float(input())
+print("Introduce el Denominador de la Segunda Fracción")
+rDenominador2 = float(input())
+print("¿Qué operación quieres ejecutar?")
+sOperacion = input()
+if sOperacion == "suma":
+    numeradorSuma = rNumerador1 * rDenominador2 + rNumerador2 * rDenominador1
+    denominadorSuma = rDenominador1 * rDenominador2
+    print("La Suma da: ", end='', flush=True)
+    print(numeradorSuma, end='', flush=True)
+    print("/", end='', flush=True)
+    print(denominadorSuma)
+else:
+    if sOperacion == "resta":
+        numeradorResta = rNumerador1 * rDenominador2 - rNumerador2 * rDenominador1
+        denominadorResta = rDenominador1 * rDenominador2
+        print("La Resta da: ", end='', flush=True)
+        print(numeradorResta, end='', flush=True)
+        print("/", end='', flush=True)
+        print(denominadorResta)
+    else:
+        if sOperacion == "multiplicacion":
+            numeradorMulti = rNumerador1 * rNumerador2
+            denominadorMulti = rDenominador1 * rDenominador2
+            print("La Multiplicación da: ", end='', flush=True)
+            print(numeradorMulti, end='', flush=True)
+            print("/", end='', flush=True)
+            print(denominadorMulti)
+        else:
+            if sOperacion == "division":
+                numeradorDivision = rNumerador1 * rDenominador2
+                denominadorDivision = rDenominador1 * rNumerador2
+                print("La División da: ", end='', flush=True)
+                print(numeradorDivision, end='', flush=True)
+                print("/", end='', flush=True)
+                print(denominadorDivision)
