@@ -1,0 +1,75 @@
+#include <iostream>
+#include <sstream>
+
+using namespace std;
+
+int main() {
+    cout << "Introduce el Numerador de la Primera Fracción" << endl;
+    int rNumerador1;
+    
+    cin >> rNumerador1;
+    cout << "Introduce el Denominador de la Primera Fracción" << endl;
+    double rDenominador1;
+    
+    cin >> rDenominador1;
+    cout << "Introduce el Numerador de la Segunda Fracción" << endl;
+    double rNumerador2;
+    
+    cin >> rNumerador2;
+    cout << "Introduce el Denominador de la Segunda Fracción" << endl;
+    double rDenominador2;
+    
+    cin >> rDenominador2;
+    cout << "¿Qué operación quieres ejecutar?" << endl;
+    string sOperacion;
+    
+    cin >> sOperacion;
+    if (sOperacion == "suma") {
+        int numeradorSuma;
+        double denominadorSuma;
+        
+        numeradorSuma = rNumerador1 * rDenominador2 + rNumerador2 * rDenominador1;
+        denominadorSuma = rDenominador1 * rDenominador2;
+        cout << "La Suma da: ";
+        cout << numeradorSuma;
+        cout << "/";
+        cout << denominadorSuma << endl;
+    } else {
+        if (sOperacion == "resta") {
+            double numeradorResta;
+            double denominadorResta;
+            
+            numeradorResta = rNumerador1 * rDenominador2 - rNumerador2 * rDenominador1;
+            denominadorResta = rDenominador1 * rDenominador2;
+            cout << "La Resta da: ";
+            cout << numeradorResta;
+            cout << "/";
+            cout << denominadorResta << endl;
+        } else {
+            if (sOperacion == "multiplicacion") {
+                double numeradorMulti;
+                double denominadorMulti;
+                
+                numeradorMulti = rNumerador1 * rNumerador2;
+                denominadorMulti = rDenominador1 * rDenominador2;
+                cout << "La Multiplicación da: ";
+                cout << numeradorMulti;
+                cout << "/";
+                cout << denominadorMulti << endl;
+            } else {
+                if (sOperacion == "division") {
+                    double numeradorDivision;
+                    double denominadorDivision;
+                    
+                    numeradorDivision = rNumerador1 * rDenominador2;
+                    denominadorDivision = rDenominador1 * rNumerador2;
+                    cout << "La División da: ";
+                    cout << numeradorDivision;
+                    cout << "/";
+                    cout << denominadorDivision << endl;
+                }
+            }
+        }
+    }
+    return 0;
+}
